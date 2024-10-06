@@ -1,0 +1,75 @@
+<!--* Add some HTML code --> <!--
+    * Visual Studio Code provides basic support for HTML programming out of the box. 
+    * There's syntax highlighting, smart completions with IntelliSense, and customizable formatting.
+    *
+    * There have been diferent versions of HTML. The doctype '<!DOCTYPE html>' indicates this HTML documents
+    * contains HTML5 code
+    *
+    * While we aren't going to delve deeply into the meaning of all the HTML elements, we want to point out a few important items. The 
+    * '<meta>' tag indicates metadata informations that isn't typically visible to the viewers unless they biew the source code in their 
+    * browser. Meta elements or tags provide descriptive information about the webpage. For exemple, they help search engines process
+    * which information in your webpages to return in search results
+    *
+    * The charecter set (charset) fot UTF-8 might seem insignificant, but it's crucial for establishing how computers interpret characters-
+    * If the metadata  for the character set is missing, that can lead to compromissed security. There's quite a bit of history and technical
+    * information behind the charset attribute, but the important takeaway from this exercise is that the Visual studio Code boilerplate provides
+    * some sensible default
+-->
+
+<!--* Edit the head --> <!--
+    * The '<head>' elemente in your HTML code contains information about your website not visible inside the browser tab.
+    *
+    * The metadata defines data about the HTML document, such as character sets, scripts, and which browser the webpage opens in
+    *
+    * The tittle of webpage appears at the top of a browser window, and is signifcant in many ways. For exemple the title is used
+    * by and displayed in seach engines.
+    *
+    * To apply styles to the HTML elemenst on the webpage, you could write the CSS code directly in the webpage head. Writing CSS
+    * in the HTML page ios called internal CSS. However, its a best practice to separate HTML structure and CSS styling. Having a
+    * separete CSS page is called external CSS. Code tends to be easier to read when it's concise and compartmentalized. You can use
+    * more external style sheets to service multiple webpages. Rather than updating each HTML page with replicated CSS code, you can 
+    * make changes to single CSS file and have those updates applied to all of the dependent web pages. 
+-->
+
+<!--* Edit the Body  --> <!--
+    * You can use an ID attribute (used in the <p> element) for styling one element, while the class attribute (used in the <li> element)
+    * is for styling all elements of the same class
+    *
+    * before do watherve u want with the code, remebe to save the file
+-->
+
+<!--* Open in browser -->  <!--
+    * You can preview your webpage locally by opening the HTML file in browser. Instead of a website address
+    * that begins with 'https://', your browser points to the local file path, wich should look similar to C:/dev/simple-website/index.html
+-->
+
+<!--* View the page using developer tools --> <!--
+    * You can inspect a webpage by using the developer tools browser.
+    *   more information about the devtoosl: https://learn.microsoft.com/en-us/microsoft-edge/devtools-guide-chromium/overview
+    *
+    * The Elements tab in developer tools shows you the document object model (DOM) as rendered in the browser. When debugging, its
+    * often important to see how the browser interprets your source code.
+    *
+    * Inspecting the page in browser provides all sorts of useful information and can help you troubleshoot problems. You can also
+    * view CSS details with the inspector.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Simple website</title>
+        <link rel="stylesheet" href="main.css">
+    </head>
+    <body>
+        <H1>Task List</H1>
+        <p id="msg">Current Task</p>
+        <ul>
+            <li class="list">Add visual styles </li>
+            <li class="list">Add light and dark themes</li>
+            <li>Enable switching the theme</li>
+        </ul>
+    </body>
+</html>
