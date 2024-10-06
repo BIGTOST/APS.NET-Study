@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("C#Sheet")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6ee709a805bee8c4c2b54980a8aa04cd138dae34")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fbd3e6edc89e66bb64f637768159e878e57833c1")]
 [assembly: System.Reflection.AssemblyProductAttribute("C#Sheet")]
 [assembly: System.Reflection.AssemblyTitleAttribute("C#Sheet")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
