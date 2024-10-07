@@ -1,0 +1,67 @@
+Two of the most commons components on any webpage are links and images. Theses items gave a profound impact on accessibility.
+Ensuring good link text and alt text is one of the first steps that you can take to improve your pages for all users
+
+Link text
+    Hyperlinks are core to browsing the web. Ensuring that a screen reader can properly read links allow all users to browse through your site.
+
+    Consider the two links in the following example text:
+        -"The little penguin, sometime known as the fairy penguin, is the smaller penguin int the world. Click Here for more information".
+        -"The little penguin, sometimes known as the fairy penguin, is the smallest penguin in the world. Visit https://en.wikipedia.org/wiki/Little_penguin for more information."
+
+    Although these links might seem fine for someone with full sighy, they won't work as you might expect with a screen reader. Remember, screen readers read the text.
+    If a URL appears in the text, the screen reader will read the URL. In general, the URL does not convey meaningful information and can sound annoying. You might have
+    experienced this problem if your phone has ever audibly read a text message with URL.
+
+    Screen readers also have the ability to read only Hyperlinks on a page, much in the same way that a sighted person would scan a page for links. If the link text is alwais 
+    "click here", all the user will hear is "click here, click here, click here, click here, ..." All links are now indistinguishable from one another, wich is a frustating 
+    experience.
+
+    The World "click" is also a problem, because not all user will click. Phone user will tap, keyboard users might select the Enter key or the Spacebar, and other clients will user other means.
+
+    We need to always use meaningful link text. Good link text briefly describes what's on ther link, In the early example about little penguins, the link goes to the Wikipedia page about
+    the link ges to the Wikipedia page about the species. The phrase little penguins would be perfect link text because it makes it clear what someone will learn about if they select the link:
+        -"The little penguin, sometimes known as the fairy penguin, is the smallest penguin in the world."
+
+ARIA attributes
+
+    imagine the following product page
+
+     _______________________________________________________________________________________________________________________________________
+    |                                                                                                                                       |
+    | Product                                                Description                                   Order                            |
+    |_______________________________________________________________________________________________________________________________________|
+    |                                                                                                                                       |
+    |  Widget                                                '[Description](´#´)'                          '[Order](´#´)'                   |
+    |_______________________________________________________________________________________________________________________________________|
+    |                                                                                                                                       |
+    |  Super Widget                                          '[Description](´#´)'                          '[Order](´#´)'                   |
+    |_______________________________________________________________________________________________________________________________________
+
+    This is common layout for a page that shows information about various items in a table, with links to the description and order. Duplicatting the
+    text of description and order make sense for someone who's using a browser. However, someone who's using a screen reader would only hear the words
+    description and order repeatd without context.
+
+    To support these types of scenarios, HTML supports a set of attributes known as Accessible Rich Internet Applications (ARIA): -> https://developer.mozilla.org/docs/Web/Accessibility/ARIA.
+    You can use these attributes to provide more information to screen readers.
+
+    For exemple, you can use 'aria-label' to describe a link when the format of the page doesn't allow you to. The description for widget might be set as:
+
+    '<a href="#" aria-label="Widget description">description</a>'
+
+    Aria has numerous uses beyond adding texto for screen readers to read for links. You can use it to describe thee roles that certain elements play when semantic HTML
+    isn't available. When you're creating a tree, for exemple, you can use ARIA roles to describe the interface to screen reader:
+
+    '
+    <h2 id="tree-label">File Viewer</h2>
+    <div role="tree" aria-labelledby="tree-label">
+        <div role="treeitem" aria-expanded="false" tabindex="0">Uploads</div>
+    </div>
+
+    '
+
+Alt text for images
+    As a genral rule, screen readers can't read the contest of an imagem. Although some might use artifical intelligence, the generated results might not be contextually accurate. Fortunately, ensuring
+    that images are accessible doesn't take much work - it's what the 'alt' attributes is all about. All meaningful imgages should have an alt attribute (know casually as alt text) to describe what the
+    are or the information that they're trying to convey
+
+    Images that are purely decorative should have their 'alt' attribute set to an empty string: 'alt=" "' this setting prevents screen readers from unnecessarily annoucing the decorative image.

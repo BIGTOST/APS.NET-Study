@@ -1,0 +1,26 @@
+Testing your webpage in various clients and views is a important as testing it in various browsers. This testing might not
+be practical in all scenarios, and it can miss situations where users use a broser but might have another disability. Fortunately,
+there are tools that can use as a developer to gauge the accessibility of your page.
+
+Contrast Checker
+    Someone who is color-blind might not be able to differentiate between colors, or might have difficulty working with
+    colors that are similar ot one another. The World Wide Web Consortium (W3C), the standards organization for the web
+    established a rating system for color contrast: -> https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html
+
+    Choosing the right colors to ensure that your page is accessible to all can be tricky to do by hand. You can use the following tools
+    to both generate appropriate colors and test your site to ensure compliance:
+
+        -Palette generation tools:
+            - Adobe colors, an interative tool for testing color combination: https://color.adobe.com/create/color-accessibility
+            -Color Safe,  a tool for generate text colors based on a selcted background color: http://colorsafe.co/
+        -Compliance checkers:
+            -Browser extensions to test a page:
+                -Edge: WCAG Color contrast checker -> https://microsoftedge.microsoft.com/addons/detail/wcag-color-contrast-check/idahaggnlnekelhgplklhfpchbfdmkjp
+                -Firefox: WCAG Color contrast checker -> https://addons.mozilla.org/firefox/addon/wcag-contrast-checker/
+                -Chrome: Colour Contrast Checker -> https://chrome.google.com/webstore/detail/colour-contrast-checker/nmmjeclfkgjdomacpcflgdkgpphpmnfe
+            -Applications:
+                -Colour Contrast Analyser (CCA) -> https://www.tpgi.com/color-contrast-checker/
+
+Lighthouse
+    Lighthouse is a atoo that google created for analyzing websites. It has become so popular that it's included in many browsers' developer tools. Lighthouse can
+    examine a page's search optimization (SEO), load performance and other best practices. Lighthouse can also analyze a page and provide a score for its current accessibility
