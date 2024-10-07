@@ -1,0 +1,65 @@
+<!--
+    * JavaScript (or ECMAScript) is a progrmming languages that helps you add interactivity to your web pages.
+    *
+    * For example, you can use JavaScript to define the behabior that happens when a user selects a button, like opening a popup window. Using JavaScript, you
+    * can add or remove content from web page without reloading it.
+    *
+    * In this unit, you set an exemple JavaScript file for you web page. In it, you create  a button to switch, between light an dark themes. Then, you attach the button to JavaScript
+    * code that performs the actual theme switching.
+-->
+
+<!--* Link to JavaScript  --> <!--
+    * Like CSS, you could add JavaScript directly to the HTML file, but a recommended best practice is to save your JavaScript in a separate file. Adding your JavaScript
+    * code to a separate file makes it easier to reuse it across several web pages. For example, you could create a pop-up alert by adding the following code anywhere within
+    * the body of your web pages:
+    *   '<script>alert('Hello World')</script>'
+    *
+    * However, it's better to add you JavaScript code to a separate file that you can link to every file that needs
+    * your custom functionality.
+    *
+    * The HTML script tag let us link to an external JavaScript file.
+    *
+    * You could place the '<script>' element in the '<head>' or elsewhere in the '<body>'. However, putting the '<script>' element at the end of the
+    * '<body>' section enables all the page content to display on the screen first, before the script is loaded.
+-->
+
+<!--* Add fault tolerance  --> <!--
+    * Adding the '<noscript>' element is an example of fault tolerance or graceful degradation. When you use the '<noscript>' element, your code can detect and
+    * plan for when a feature isn't supported or available.
+    *
+    * the lesson continous in the app.js
+-->
+
+<!--* Add a buttn  --> <!--
+    * You need a way to let your users switch the light and dark themes in your web page.
+-->
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Task List</title>
+        <link rel="stylesheet" href="main.css">
+    </head>
+    <body class="light-theme">
+        <H1>Task List</H1>
+        <p id="msg">Current Task</p>
+        <ul>
+            <li class="list">Add visual styles </li>
+            <li class="list">Add light and dark themes</li>
+            <li>Enable switching the theme</li>
+        </ul>
+
+        <div>
+            <button class="btn">Dark</button>
+        </div>
+
+        <script src="app.js"></script>
+        <noscript>You need to enable JavaScript to view the full site</noscript>
+    </body>
+</html>

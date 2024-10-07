@@ -1,1 +1,43 @@
-<!--*  -->
+<!--
+    * Carscading Style Sheet (CSS) let you specify how your page should look. The basic is to define what the style should be for the elements that you
+    * use within  your HTML pages. While the HTML elements define your content, CSS styles define what this content looks like.
+    *
+    * For exemple, you can apply rounded corners or give a gradient background to an element, or you cn use CSS tpo specify how hyperlinks look and
+    * respond when you interact with them. You can also perform sophisticated page layout and animation effects.
+    *
+    * You can apply styles to specific elements, all elements of a specific type, or use classes to style many different elements.
+-->
+
+<!--* External CSS --> <!--
+    * One benefit of external CSS is that multiple HTML pages can link to the same CSS file. If you make a change to the CSS, your styling is updated for
+    * each page. When you use an HTML file for your page content, a CSS file for styling, and a JavaScript file for interaction, it's called separation 
+    * of concern.
+    *
+    * As described previously, you can also write CSS directly in HTML, which is called intenal CSS. Even for a basic website, there are so many CSS rules the HTML 
+    * page can  became cluttered quickly. With more than one page, the same CSS would  often be repeated and challenging to manage.
+    *
+    * continuos in the main.css
+-->
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Task List</title>
+        <link rel="stylesheet" href="main.css">
+    </head>
+    <body class="light-theme">
+        <H1>Task List</H1>
+        <p id="msg">Current Task</p>
+        <ul>
+            <li class="list">Add visual styles </li>
+            <li class="list">Add light and dark themes</li>
+            <li>Enable switching the theme</li>
+        </ul>
+    </body>
+</html>

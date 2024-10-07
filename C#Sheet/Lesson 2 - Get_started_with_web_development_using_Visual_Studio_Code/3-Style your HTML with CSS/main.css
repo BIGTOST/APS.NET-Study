@@ -1,0 +1,84 @@
+/** CSS Rules */
+/*
+    * CSS rules are how you apply styles to HTML elements. CSS rules have a selector, which is used to express the element (or elements) to which the style should be applied.
+    *
+    * This code snippet contains two rules. Each rules has:
+    *   - A selector. 'Body' and 'Ul' are the selectors of the two rules, and are used to select to which element(s) the styles apply-
+    *   - An opening curly brace ({)
+    *   - A list of style declarations that detemine what the selected element(s) should look like
+    *   - A closing curly brace (})
+    *
+    * For exemple the 'ul' selector selects  the <ul> HTML element in the page to apply styles to it. The declaration is 'font-family: Arial, Helvetica, sans-serif'
+    * and determines what the style should be. The property name is 'font-family', and the value is 'Arial, Helvetica, sans-serif'.
+    *
+*/
+
+/** Selectors  */
+/*
+    * ID and class selectors  let you apply styles to custom attribute names in you HTML. You use an ID to stylee one element, whereas you use class to style muultiple elelments
+    *
+    * The preceding code contains some CSS rules, with the last two rules using custom attributes to select elements: '.list' and '#msg'
+    *   - '.list' is a class selector. Each HTML that contains a 'class' attribute set to list gets the style that are defined wihin this selector.
+    *   - '#msg' is an ID selector. The HTML element that has its 'id' attribute set to 'msg' gets the styles that are defined within this selector.
+    * The name that we use for the selectors can be arbitrary, as long as they match what we defined in the HTML
+*/
+
+/** Root  */
+/* 
+    * The ':root' selector represents the '<HTML>' element in the HTML page. For this kind of task, a best practice is to define a set
+    * of global CSS variables in a CSS rule with the ':root' selector. In this exemple, we've define three color variables. Now, you can 
+    * use these variables in other CSS rules.
+*/
+
+/** declaring  */
+/*
+    * In the '.light-theme' and '.dark-theme, you defined two new variables, 'bg' and 'fontColor', which specify a background and font color. These variables use the 'var'
+    * keyword to set their property values to the variables previously specified in your ':root' selector.
+*/
+
+
+:root
+{
+    --green:#00ff00;
+    --white:#FFFFFF;
+    --black:#000000;
+}
+
+body
+{
+    background: var(--bg);
+    color: var(--fontColor);
+    font-family: monospace;
+}
+
+ul
+{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+li
+{
+    list-style: circle;
+}
+
+.list
+{
+    list-style: square;
+}
+
+#msg
+{
+    font-family: monospace;
+}
+
+.light-theme
+{
+    --bg: var(--green);
+    --fontColor: var(--black);
+}
+
+.dark-theme
+{
+    --bg: var(--black);
+    --fontColor: var(--green);
+}
