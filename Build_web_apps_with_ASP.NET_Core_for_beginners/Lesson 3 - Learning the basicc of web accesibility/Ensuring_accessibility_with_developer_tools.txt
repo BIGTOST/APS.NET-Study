@@ -1,0 +1,7 @@
+Testing your webpage in various clients and views is a important as testing it in various browsers. This testing might not
+be practical in all scenarios, and it can miss situations where users use a broser but might have another disability. Fortunately,
+there are tools that can use as a developer to gauge the accessibility of your page.
+
+Contrast Checker
+    Someone who is color-blind might not be able to differentiate between colors, or might have difficulty working with
+    colors that are similar ot one another. The World Wide Web 

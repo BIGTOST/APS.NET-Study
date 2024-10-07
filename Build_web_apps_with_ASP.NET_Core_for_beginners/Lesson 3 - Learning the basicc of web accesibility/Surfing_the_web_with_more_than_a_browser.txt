@@ -1,0 +1,25 @@
+You are probably very familiar wit using a browser as a client to browse the web. When you think about designing
+webpages, you can picture the user experience with this client because you have personal experience with ir. But not all
+users use a browser in the same way, or use a browser at all. To crea experiences for all users, you should understand the 
+various tools that people might use when they browse the Web
+
+Screen readers
+    One of the best-know accessibility tools is a screen reader. Screen readers are commonly used clients for peoples with
+    vision impairments. They're build into most operations systems. As we spend time ensuring that a browser properly conveys
+    the information that we want to share, we must also ensure that a screen reader does the same
+
+    At it mos basic, a screen reader read s a page from top to bottom audibly. If your page is all text, the reader conveys the
+    information in a similar way to browser. Of course, webpages are rarely  purely text; they contain links, graphics, color, and
+    other visual components. Care must be taken to ensure that a screen reader can correctly read this information.
+
+    Some browsers also have built-in tools and extesions that can read text aloud or even provide som basic navigational features,
+    such as these accessibility-focused Edge browser tools. These browser tools are also important accessibility tools, but they
+    function differntly from screen readers.
+
+Zoom
+    Another tool that people with vision impairments commonly use is zooming. The most basic type of zooming is static zoom, which
+    is controlled through the keyboard shortcut or by decreasing screen resolution. This type os zoom resizes the entire page. Using
+    resposive design, where  items shift based on the viewport, is impotant to provide a good user experience at increased zoom levels
+
+    
+

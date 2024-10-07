@@ -1,0 +1,6 @@
+Ensuring that your webpage is accessible to all users and all clients is critical. As Tim Berners-Lee, the creator of World 
+Wide Web, once said: "The power of the Web is in its universality. Acess by everyone regardless of disability is an essentian aspect"
+
+As a burgeoning web developer, you belive that learning how to ensure that your pages are acessible early on is important. It's always 
+easier to build a page to be acessible than it is to retrofit it later. If you learn these skills when you first start down the path they'll
+become natural. You can then create accessible pages and spot potential pitfalls.
