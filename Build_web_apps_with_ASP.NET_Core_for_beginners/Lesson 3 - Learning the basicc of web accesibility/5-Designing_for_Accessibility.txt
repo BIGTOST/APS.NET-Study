@@ -22,3 +22,23 @@ Use HTML the way it was designed
     a button.
 
 Use good visual cues
+    Developers often think about screen readers as only accessibility. However, users might use numerous other tools, or they might not
+    use tools at all. Users who are using the browser will rely on certain visual cus to understand how to interact with your page.
+
+    One of the great features of CSS is that it provides complete control over how to display a page, including removing certain display elements. For exemple,
+    you can reomve the outline from a text box or remove the underline from a hyperlink. Unfortunately, removing thoose types of cues can make it more challenging
+    for someone who depends on them to recognize the type of control.
+
+Consider the keyboard 
+
+
+
+
+
+
+
+
+
+
+
+             i will be back soon
