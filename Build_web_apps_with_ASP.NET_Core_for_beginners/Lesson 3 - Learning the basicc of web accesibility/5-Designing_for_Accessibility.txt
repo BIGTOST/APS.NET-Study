@@ -29,7 +29,23 @@ Use good visual cues
     you can reomve the outline from a text box or remove the underline from a hyperlink. Unfortunately, removing thoose types of cues can make it more challenging
     for someone who depends on them to recognize the type of control.
 
-Consider the keyboard 
+Consider the keyboard
+    Some user can't use mouse or trackpad/touchpad. Instead, these users rely on keyboard interaction to tab from one element to the next. It's important for your pages
+    to present your content in logical order so a keyboard user can access each interactive element as they move down.
+
+    When a user moves through a page by tabbing, focus one control to the next based on the order in which the controls are listed in HTML soucer. The controls for your page
+    should be listed in the HTML source in the order in which you expect the page to be browsed, while relying on CSS to lay out the page visually to users.
+
+    For example, imagine creating a form with two columns. You'll want to consider what the natural flow is for someone filling out the form, and then list
+    the controls in that order. Then you can use CSS to create the columns and display the controls in their appropriate locations.
+
+    Keyboard navigaton relies heavily on semantic HTML. Certain controls (like buttons) accept focus, whereas 'div' elements don't. If you're re-creating controls that already 
+    exist in HTML, you're making it more difficult for someone to use your page with a keyboard.
+
+    Important
+
+        Keyboard navigation needs to be tested manually, and you should do it on every page that you create. WebAIM has more information about keyboard navigation strategies.
+        -> https://webaim.org/techniques/keyboard/
 
 
 
@@ -41,4 +57,4 @@ Consider the keyboard
 
 
 
-             i will be back soon
+
