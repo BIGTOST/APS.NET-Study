@@ -1,0 +1,42 @@
+We used the @ symbol to switch contexts between HTML and C#. In this unit, we will learn about tag helpers. Tag helpers are a special kind of HTML element that can contain
+C# code. We'll aslo learn about page handlres. Page handlers are methods that handle browser requests. 
+
+Tag helpers 
+    Tab helpers are used to address the inefficiencies of context switching between HTML and C#. Most ASP.NET Core's built-in Tag helpers extend
+    standard HTML elements. Tag helpers provide extra server-side attributes for HTML elements, making the elemens more robyst
+
+    Partial Tag Helper
+        '<partial name="_ValidationScriptsPartial" />'
+
+        This injects the content of the '_ValidationScriptsPartial.cshtml' file into a page. The '_ValidationScriptsPartial.cshtml' contains JavaScript that's used to validate forms input,
+        so it needs to be included on every page that contains a form.
+
+    Label tag Helper
+        '<label asp-for="Foo.Id" class="control-label"></label>'
+
+        This extends the standad HTML '<label>' element. Like many tag helpers, it uses an 'asp-for' attribute. The attribute accepts a property from
+        the 'PageModel'. In this case, the name of the 'PageModel'´ 'FOO.Id' property (specifically, the string "Id") will be rendered as the content for an
+        HTML '<label>' element.
+
+    input tag helper
+        '<input asp-for="Foo.Id" class="form-control" />'
+
+        Similar to the previous example, this estends the standard HTML '<input>' element. It also uses an 'asp-for' attribute to specify a 'PageModel' property. In this case,
+        the value of the 'Foo.Id' property will be renderd as the 'value' attribute for an HTML '<input>' element.
+
+    validation Summary Tag Helper
+        '<div asp-validation-summary="All"></div>'
+
+        The Validation Summary Tag Helper displays a validation message for a single property on the model.
+
+        Note
+            Things like validation rules and property display names are defined in the PageModel class
+
+Page handlres
+    The 'PageModel' class defines page handlers for HTTP requests and data used to render the page. In the previous exercise, the PizzaListModel class handled the HTTP
+    Get request by setting the value of the 'PizzaList' property to the value of 'service.GetPizzas()'.
+
+    Common handlers include 'OnGet' for page initialization and 'OnPost' for from form submisson. To handle an HTTP Post, a page handler might verify the user-submitted data,
+    present the input form page again if invalid, or send the valid data to a service or database for persistence.
+
+    
