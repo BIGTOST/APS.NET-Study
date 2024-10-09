@@ -1,0 +1,118 @@
+Our pizza service supports CRUD operations for a list of pizzas. These operations are performed through HTTP verbs, which are mapped via ASP.NET Core
+attributes. As you saw the HTTP 'GET' verb is used to retrive one or more items from a service. Such an action is annotated with the [HttpGet] attribute.
+
+The following table shows the mapping of the four operations that your are implementing for the pizza service:
+
+         ______________________________________________________________________________________________________
+        |                                                                                                      |
+        |    HTTP action verb                    CRUD operation                       ASP.NET Core attribute   |
+        |______________________________________________________________________________________________________|
+        |                                                                                                      |
+        |    'GET'                               Read                                 [HttpGet]                |
+        |______________________________________________________________________________________________________|
+        |                                                                                                      |
+        |    'POST'                              Create                               [HttpPost]               |
+        |______________________________________________________________________________________________________|
+        |                                                                                                      |
+        |    'PUT'                               Update                               [HttpPut]                |
+        |______________________________________________________________________________________________________|
+        |                                                                                                      |
+        |    'DELETE'                            Delete                               'HttpDelete'             |
+        |______________________________________________________________________________________________________|
+
+    Post
+        To enable user to add a new item to the endpoint, you must implement the 'POST' action by using the [HttpPost]
+        attribute. When you pass the item (in this example, a pizza) into the method as a parameter, ASP.NET Core automatically
+        converts any application/JSON sent to the endpoint into a populated .NET 'Pizza' object.
+
+        e.g. of the code:
+
+        '
+            [HttpPost]
+            public IActionResult Create(Pizza pizza)
+            {
+                // This code will save the pizza and return a result
+            }
+        '
+
+        The '[HttpPost]' attribute maps HTTP 'POST' requests send to 'http://localhost:{PORT}/Pizza' by using the 'Cerate()' method.
+        Instead of returning a list of pizza, as we saw with the 'Get()' method, this method returns an IActionResult response.
+
+        'IActionResult' lets the client know if the request succeed and provides tha ID of the newly created pizza. IActionResult uses standard
+        HTTP status code, so it can easily integrate with client regrardless of the language or plataform they're running on
+
+         ____________________________________________________________________________________________________________________________________
+        |                                                                                                                                    |
+        |    ASP.NET Core            HTTP Status         Description                                                                         |
+        |    action result           code                                                                                                    |
+        |____________________________________________________________________________________________________________________________________|
+        |                                                                                                                                    |
+        |    'CreatedAction'         200                 The pizza was added to the in-memory cache.                                         |
+        |                                                The pizza is included in the response body in the media type, as defined in the     |
+        |                                                'accept' HTTP request header (JSON by default)                                      |
+        |____________________________________________________________________________________________________________________________________|
+        |                                                                                                                                    |
+        |    'BadRequest' is         400                 The request body's 'pizza' object invlid                                            |
+        |     implied                                                                                                                        |
+        |____________________________________________________________________________________________________________________________________|
+
+        Fortunately, 'ControllerBase' has utility methods that create the appropiate HTTP response codes and messages for you
+
+
+    Put
+        Modify or updating a pizza in out invetory is similar to the post method that you implemented, but it uses the [HttpPut] attribute and takes in the 'id'
+        parameter in addition to the 'Pizza' object that needs to be Updated:
+
+        '
+            [HttpPut("{id}")]
+            public IActionResult Update(int id, Pizza pizza)
+            {
+                // This code will update the pizza and return a result
+            }
+        '
+
+        Each 'ActionResult' instan ce used in the preceding action is mapped to the corresponding HTTP status code in the following table
+
+         ____________________________________________________________________________________________________________________________________
+        |                                                                                                                                    |
+        |    ASP.NET Core            HTTP Status         Description                                                                         |
+        |    action result           code                                                                                                    |
+        |____________________________________________________________________________________________________________________________________|
+        |                                                                                                                                    |
+        |    'No Content'            204                 The pizza was updated in the in-memory cache.                                       |
+        |____________________________________________________________________________________________________________________________________|
+        |                                                                                                                                    |
+        |    'BadRequest'            400                 The request body's Id value doesn't match the route's id value.                     |
+        |____________________________________________________________________________________________________________________________________|
+        |                                                                                                                                    |
+        |    'BadRequest' is         400                 The request body's 'pizza' object invlid                                            |
+        |     implied                                                                                                                        |
+        |____________________________________________________________________________________________________________________________________|
+
+    Delete
+        One of the easier actions to implement is the 'Delete' action, wich takes in just the 'id' parameter of the pizza to remove from 
+        the in-memory cache:
+
+        '
+            [HttpDelete("{id}")]
+            public IActionResult Delete(int id)
+            {
+                // This code will delete the pizza and return a result
+            }
+        '
+
+        Each 'ActionResult' instance used in the preceding action is mapped to the corresponding HTTP status code in the following
+        table:
+
+         _____________________________________________________________________________________________________________________________________
+        |                                                                                                                                     |
+        |    ASP.NET Core            HTTP Status         Description                                                                          |
+        |    action result           code                                                                                                     |
+        |_____________________________________________________________________________________________________________________________________|
+        |                                                                                                                                     |
+        |    'No Content'            204                 The pizza was deleted in the in-memory cache.                                        |
+        |_____________________________________________________________________________________________________________________________________|
+        |                                                                                                                                     |
+        |    'NotFound'              404                 A pizza that matches the provided id parameter doesn't exist in the in-memory cache. |
+        |_____________________________________________________________________________________________________________________________________|
+

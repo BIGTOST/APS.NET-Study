@@ -1,0 +1,37 @@
+@Exercicio___Create_a_web_API_project_HostAddress = http://localhost:5109
+
+GET {{Exercicio___Create_a_web_API_project_HostAddress}}/Pizza/
+Accept: application/json
+###
+
+GET {{Exercicio___Create_a_web_API_project_HostAddress}}/Pizza/3
+Accept: application/json
+###
+
+POST {{Exercicio___Create_a_web_API_project_HostAddress}}/Pizza/create
+Content-Type: application/json
+
+{
+    "name": "mamamia melons 3",
+    "isGlutenFree": false
+}
+
+###
+
+DELETE {{Exercicio___Create_a_web_API_project_HostAddress}}/Pizza/delete/5
+
+###
+
+Post {{Exercicio___Create_a_web_API_project_HostAddress}}/Pizza/updateWithPost/7
+Content-Type: application/json
+
+{
+    "id": 7,
+    "name": "what is the purpor of the PUT if this work",
+    "isGlutenFree": false
+}
+
+###
+
+
+

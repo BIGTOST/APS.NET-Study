@@ -1,6 +1,0 @@
-@Exercicio___Create_a_web_API_project_HostAddress = http://localhost:5109
-
-GET {{Exercicio___Create_a_web_API_project_HostAddress}}/weatherforecast/
-Accept: application/json
-
-###
