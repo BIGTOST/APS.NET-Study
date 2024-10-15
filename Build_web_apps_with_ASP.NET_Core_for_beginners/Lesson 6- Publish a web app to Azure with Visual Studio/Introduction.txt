@@ -1,0 +1,12 @@
+Imagine you're a software developer working for a ski resort. You're lauching a new application that will let users view
+trail maps and purchase lift tickets on my website or from their mobile phone. You want to crea an ASP.NET Core web application
+to complement and advertise the app. Being a Viseual Studio developer, you want to use Visual Studio 2022 to create, deply, and 
+manage your new site.
+
+Visual Studing and Azure App Service provide a powerful mechanism for creating, and maintaining web apps in Azure.
+
+Learning Objectives
+	-Create an ASP.NET Core 
+	-Publish a web app Azure using visual studio
+	-Update a web app in Visueal studio and publhis the change to Azure
+
